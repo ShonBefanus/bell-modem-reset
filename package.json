@@ -1,0 +1,8 @@
+{
+  "name": "bell-modem-reset",
+  "version": "1.0.0",
+  "description": "reset bell hub",
+  "main": "index.js",
+  "author": "Moi",
+  "license": "MIT"
+}
