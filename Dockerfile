@@ -11,5 +11,7 @@ RUN npm install && npm cache clean --force
 WORKDIR /node/app
 
 COPY ./index*.js .
+COPY ./config.json .
 
-CMD ["node", "./index.js"]
+
+CMD ["node", "--no-warnings", "index.js"]
