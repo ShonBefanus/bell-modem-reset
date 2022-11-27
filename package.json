@@ -15,8 +15,10 @@
     "build": "docker-compose build",
     "up": "docker-compose up -d",
     "down": "docker-compose down",
-    "start": "docker-compose run bell",
-    "shutdown": "yarn up && yarn start &&  yarn down && shutdown /h"
+    "reset": "docker-compose run bell",
+    "hibernate": "shutdown /h",
+    "start": "yarn up && yarn reset &&  yarn down",
+    "shutdown": "yarn start && yarn hibernate"
   },
   "devDependencies": {}
 }
