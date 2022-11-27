@@ -1,0 +1,14 @@
+# dependencies
+node_modules
+
+
+# system files
+*.log
+.vs
+.idea
+
+# cache
+.cache
+
+#config
+config.json

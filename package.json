@@ -3,6 +3,20 @@
   "version": "1.0.0",
   "description": "reset bell hub",
   "main": "index.js",
+  "type": "module",
   "author": "Moi",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "chrome": "^0.1.0",
+    "esm": "^3.2.25",
+    "puppeteer": "^19.3.0"
+  },
+  "scripts": {
+    "build": "docker-compose build",
+    "up": "docker-compose up -d",
+    "down": "docker-compose down",
+    "start": "docker-compose run bell",
+    "shutdown": "yarn up && yarn start &&  yarn down && shutdown /h"
+  },
+  "devDependencies": {}
 }
