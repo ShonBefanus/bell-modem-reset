@@ -17,8 +17,7 @@
     "down": "docker-compose down",
     "reset": "docker-compose run bell",
     "hibernate": "shutdown /h",
-    "start": "yarn up && yarn reset &&  yarn down",
-    "shutdown": "yarn start && yarn hibernate"
+    "shutdown": "yarn reset && yarn hibernate"
   },
   "devDependencies": {}
 }
