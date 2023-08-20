@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "author": "Moi",
-  "license": "MIT",
+  "license": "UNLICENSED",
+  "private": "true",
   "dependencies": {
     "chrome": "^0.1.0",
     "esm": "^3.2.25",
@@ -15,9 +16,16 @@
     "build": "docker-compose build",
     "up": "docker-compose up -d",
     "down": "docker-compose down",
-    "reset": "docker-compose run bell",
+    "reset": "docker-compose up && docker-compose run bell",
     "hibernate": "shutdown /h",
-    "shutdown": "yarn reset && yarn hibernate"
+    "shutdown": "yarn reset2 && yarn pause && yarn hibernate",
+    "reset2": "node --no-warnings index.js",
+    "pause": "node  index2.js",
+    "wait": "node ./7days/wait.js",
+    "save7days": "./7days/save7days.cmd",
+    "copy7days": "./7days/copy7days.cmd",
+	  "copyBrouillon": "xcopy /Y  C:\\Users\\mic\\Documents\\Brouillon1.xlsm  M:\\mic\\Documents\\"
+
   },
   "devDependencies": {}
 }

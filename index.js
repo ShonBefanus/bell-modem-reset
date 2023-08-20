@@ -7,7 +7,7 @@ const {password, url} = config;
   const browser = await puppeteer.launch({
     'headless': true,
     'args': ['--no-sandbox', '--disable-setuid-sandbox']
-});
+  });
     const page = await browser.newPage();
     const yes = '#yes';
     await page.setViewport({width:1624,height:768});
@@ -28,4 +28,5 @@ const {password, url} = config;
     await page.waitForSelector(yes,{timeout:500});
     await page.click(yes);
     await browser.close();
+    console.log('Modem is reset');
 })();
